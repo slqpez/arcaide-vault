@@ -13,14 +13,8 @@ Arcade Vault — a platform for playing games online and competing for the highe
 - Next.js 16.3.4 (App Router, in `app/`), React 19.2.8, TypeScript (strict), Tailwind CSS v4, ESLint 9 flat config.
 - No test runner, database, or backend is configured yet — this is still the unmodified `create-next-app` scaffold.
 
-## Commands
-
-```bash
-npm run dev      # start dev server (also regenerates AGENTS.md's Next.js banner — see below)
-npm run build    # production build
-npm run start    # run production build
-npm run lint     # eslint
-```
+## Skills
+Usa siempre /frontend-design para diseñar la interfaz de usuario
 
 ## Critical: read Next.js docs before coding
 

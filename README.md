@@ -15,4 +15,11 @@ https://github.com/Klerith/fernando-skills
 npx skills@latest add Klerith/fernando-skills
 ```
 
-## Hola Mundo
+## Commands
+
+```bash
+npm run dev      # start dev server (also regenerates AGENTS.md's Next.js banner — see below)
+npm run build    # production build
+npm run start    # run production build
+npm run lint     # eslint
+```
