@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Press_Start_2P, JetBrains_Mono, Courier_Prime } from "next/font/google";
+import Nav from "@/components/nav";
 import "./globals.css";
 
 const pixelFont = Press_Start_2P({
@@ -35,7 +36,13 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <body className="min-h-full">
         <div className="av-bg" />
         <div className="av-noise" />
-        <div className="av-root">{children}</div>
+        <div className="av-root">
+          <Nav />
+          <main className="av-main">{children}</main>
+          <footer className="mono border-t border-[var(--line)] px-8 py-5 text-center text-[11px] tracking-[0.16em] text-[var(--ink-faint)]">
+            © 2026 ARCADE VAULT · HECHO CON PIXELES Y NEÓN · v2.6.0
+          </footer>
+        </div>
       </body>
     </html>
   );
