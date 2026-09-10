@@ -12,10 +12,11 @@ export default function Nav() {
   const [open, setOpen] = useState(false);
   const user = useSyncExternalStore(subscribeUser, getUser, getServerSnapshot);
 
-  const isActive = (name: "inicio" | "biblioteca" | "salon" | "auth") => {
+  const isActive = (name: "inicio" | "biblioteca" | "salon" | "about" | "auth") => {
     if (name === "inicio") return pathname === "/";
     if (name === "biblioteca") return pathname === "/biblioteca" || pathname.startsWith("/juegos/");
     if (name === "salon") return pathname === "/salon-de-la-fama";
+    if (name === "about") return pathname === "/acerca-de";
     return pathname === "/iniciar-sesion";
   };
 
@@ -43,6 +44,9 @@ export default function Nav() {
           </Link>
           <Link href="/salon-de-la-fama" className={isActive("salon") ? "active" : ""}>
             Salón de la Fama
+          </Link>
+          <Link href="/acerca-de" className={isActive("about") ? "active" : ""}>
+            Acerca de
           </Link>
         </div>
         <div className="spacer"></div>
@@ -77,6 +81,9 @@ export default function Nav() {
         </Link>
         <Link href="/salon-de-la-fama" className={isActive("salon") ? "active" : ""} onClick={close}>
           Salón de la Fama
+        </Link>
+        <Link href="/acerca-de" className={isActive("about") ? "active" : ""} onClick={close}>
+          Acerca de
         </Link>
         <Link href="/iniciar-sesion" className={isActive("auth") ? "active" : ""} onClick={close}>
           {user ? "Cuenta" : "Iniciar Sesión"}
